@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nahian Sarower Siam - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="StyleSheet.css">
+</head>
+<body>
+    
+    <!-- Animated Background Container -->
+    <div id="background-animation"></div>
+
+    <!-- Header & Navigation -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="#home" class="text-2xl font-bold">Nahian Sarower Siam</a>
+                </div>
+                <div class="flex items-center">
+                    <nav class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-4" id="nav-menu">
+                            <a href="#home" class="nav-link active px-4 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                            
+                            <!-- About Dropdown -->
+                            <div class="relative" id="about-dropdown-container">
+                                <a href="#about" class="nav-link flex items-center px-4 py-2 rounded-md text-sm font-medium hover:bg-slate-200/50 dark:hover:bg-slate-700/50 hover:text-slate-900 dark:hover:text-slate-200 transition-colors">
+                                    About <i data-feather="chevron-down" class="w-4 h-4 ml-1"></i>
+                                </a>
+                                <div id="about-dropdown-menu" class="hidden absolute mt-2 w-48 rounded-md shadow-lg py-1 bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 z-20">
+                                    <a href="#experience" class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700">Experience</a>
+                                    <a href="#education" class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700">Education</a>
+                                    <a href="#certifications" class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700">Certifications</a>
+                                </div>
+                            </div>
+                            
+                            <a href="#contact" class="nav-link px-4 py-2 rounded-md text-sm font-medium hover:bg-slate-200/50 dark:hover:bg-slate-700/50 hover:text-slate-900 dark:hover:text-slate-200 transition-colors">Contact</a>
+                        </div>
+                    </nav>
+                     <div class="md:hidden ml-4">
+                        <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-slate-500 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                            <span class="sr-only">Open main menu</span>
+                            <i data-feather="menu"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="md:hidden hidden bg-white/80 dark:bg-slate-800/80 backdrop-blur-lg" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700">About</a>
+                <div class="pl-4">
+                    <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700">Experience</a>
+                    <a href="#education" class="block px-3 py-2 rounded-md text-base font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700">Education</a>
+                    <a href="#certifications" class="block px-3 py-2 rounded-md text-base font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700">Certifications</a>
+                </div>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-16">
+        <!-- Home Section -->
+        <section id="home" class="min-h-screen flex items-center">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center pt-16">
+                    <img src="/Profile.jpg" alt="Nahian Sarower Siam" class="w-64 h-64 rounded-full mx-auto mb-8 border-4 border-white/50 shadow-lg glow-border">
+                    <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">Nahian Sarower Siam</h1>
+                    <p class="mt-4 text-lg md:text-xl max-w-3xl mx-auto">Experienced IT Professional | ERP Development | Cyber Security | Technical Support</p>
+                    <div class="mt-8 flex flex-col items-center space-y-4">
+                        <div class="flex justify-center space-x-4">
+                            <a href="https://bd.linkedin.com/in/nahian-sarower-siam" target="_blank" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 shadow-sm">
+                                <i data-feather="linkedin" class="mr-2"></i> LinkedIn
+                            </a>
+                            <a href="https://github.com/Nahian9678" target="_blank" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-900 shadow-sm">
+                                <i data-feather="github" class="mr-2"></i> GitHub
+                            </a>
+                        </div>
+                        <div class="flex justify-center space-x-4">
+                            <a href="#contact" class="inline-flex items-center px-6 py-3 border border-slate-300 dark:border-slate-600 text-base font-medium rounded-md bg-white text-slate-700 dark:bg-slate-800 dark:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-700 shadow-sm">
+                                Get In Touch
+                            </a>
+                            <a href="./Nahian Saroer SIam Resume - Copy.pdf" download="Nahian_Siam_Resume.pdf" class="inline-flex items-center px-6 py-3 border border-slate-300 dark:border-slate-600 text-base font-medium rounded-md bg-white text-slate-700 dark:bg-slate-800 dark:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-700 shadow-sm">
+                                <i data-feather="download" class="mr-2"></i> Download Resume
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold mb-8 text-center">About Me</h2>
+                <div class="max-w-3xl mx-auto text-center text-lg">
+                    <p>
+                        Experienced IT professional specializing in ERP development, system administration, and technical support. Currently serving as an IT Officer at Quazi Abedin Tex Limited, driving ERP enhancements and IT infrastructure optimization to improve operational efficiency. Previously, worked as a Junior Engineer at Anila Trading Corporation, overseeing system maintenance, troubleshooting, and IT infrastructure management. Skilled in streamlining business processes, ensuring system reliability, and supporting seamless technology integration.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold mb-8 text-center">Work Experience</h2>
+                <div id="experience-container" class="relative max-w-4xl mx-auto">
+                     <!-- Timeline line -->
+                    <div class="absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-slate-300/50 dark:bg-slate-700/50"></div>
+                     <!-- Dynamic content will be injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Development Section -->
+        <section id="gamedev" class="py-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold mb-8 text-center">Game Development</h2>
+                <div class="max-w-4xl mx-auto text-center">
+                    <p class="text-lg mb-8">
+                        Leveraging the power of Unreal Engine, I create immersive and interactive game experiences. Below is a showcase of my latest project.
+                    </p>
+                    <div class="aspect-video card p-2 backdrop-blur-sm rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl border">
+                        <!-- Video Placeholder -->
+                        <div class="w-full h-full bg-slate-300 dark:bg-slate-700 rounded-lg flex items-center justify-center">
+                            <div class="text-center">
+                                 <i data-feather="video" class="w-16 h-16 mx-auto text-slate-500 dark:text-slate-400"></i>
+                                <p class="mt-4 font-semibold">Your Game Video Here</p>
+                                <p class="text-sm">You can embed your video by replacing this placeholder.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold mb-8 text-center">Education</h2>
+                <div id="education-container" class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- Dynamic content will be injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold mb-8 text-center">My Expertise</h2>
+                <ul id="skills-container" class="honeycomb">
+                    <!-- Honeycomb cells will be injected here -->
+                </ul>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="py-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold mb-8 text-center">Certificates & Achievements</h2>
+                <div id="certifications-container" class="max-w-4xl mx-auto space-y-4">
+                    <!-- Dynamic content will be injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Hobbies Section -->
+        <section id="hobbies" class="py-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold mb-8 text-center">Hobbies & Interests</h2>
+                <div class="flex justify-center items-center space-x-8">
+                    <div class="text-center">
+                        <div class="card p-6 rounded-full mb-2 inline-block backdrop-blur-sm shadow-md overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl border">
+                            <i data-feather="monitor" class="w-10 h-10 text-blue-600"></i>
+                        </div>
+                        <p class="font-semibold">Esports</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="card p-6 rounded-full mb-2 inline-block backdrop-blur-sm shadow-md overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl border">
+                             <i data-feather="globe" class="w-10 h-10 text-blue-600"></i>
+                        </div>
+                        <p class="font-semibold">Travelling</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="card p-6 rounded-full mb-2 inline-block backdrop-blur-sm shadow-md overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl border">
+                            <i data-feather="tv" class="w-10 h-10 text-blue-600"></i>
+                        </div>
+                        <p class="font-semibold">Watching Sports</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold mb-8 text-center">Get In Touch</h2>
+                <div class="max-w-lg mx-auto text-center">
+                    <p class="text-lg mb-8">I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
+                    <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                        <div class="flex items-center">
+                            <i data-feather="mail" class="w-5 h-5 mr-2 text-blue-600"></i>
+                            <a href="mailto:nahiansarower1996@gmail.com" class="hover:text-blue-600">nahian.sarower.pro@gmail.com
+</a>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="phone" class="w-5 h-5 mr-2 text-blue-600"></i>
+                            <a href="tel:+8801626004560" class="hover:text-blue-600">+8801626004560</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800/80 text-slate-300 py-6">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; <span id="current-year"></span> Nahian Sarower Siam. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Floating Action Buttons -->
+    <div class="fixed top-1/2 right-0 -translate-y-1/2 z-50 flex flex-col space-y-2 p-2 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm rounded-l-lg shadow-lg">
+        <!-- Dark Mode Toggle -->
+        <button id="theme-toggle" class="p-2 rounded-full text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+            <i id="theme-toggle-dark-icon" class="hidden" data-feather="moon"></i>
+            <i id="theme-toggle-light-icon" class="hidden" data-feather="sun"></i>
+        </button>
+        <!-- Scroll to Top Button -->
+        <button id="scrollToTopBtn" class="p-2 rounded-full text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+            <i data-feather="arrow-up" class="w-5 h-5"></i>
+        </button>
+    </div>
+
+
+    <script>
+        // --- DATA FROM RESUME ---
+        const portfolioData = {
+            experience: [
+                {
+                    date: "2024 - Current",
+                    title: "IT Officer",
+                    company: "Quazi Abedin Tex Limited (QATL)",
+                    location: "Savar, Bangladesh",
+                    description: "Playing a key role in the development of the company's ERP system, streamlining operations and improving efficiency. Additionally, providing basic IT support to ensure smooth day-to-day functioning of the organization's technology infrastructure."
+                },
+                {
+                    date: "2023 - 2024",
+                    title: "IT Officer",
+                    company: "Anila Trading Corporation",
+                    location: "Dhaka, Bangladesh",
+                    description: "Responsible for managing and providing comprehensive IT support across the organization. This included maintaining hardware and software systems, troubleshooting technical issues, and ensuring the smooth operation of the company's IT infrastructure."
+                }
+            ],
+            education: [
+                {
+                    year: "2023",
+                    degree: "Bachelor of Computer Science and Engineering",
+                    institution: "North South University",
+                    location: "Dhaka, Bangladesh"
+                },
+                {
+                    year: "2016",
+                    degree: "Higher Secondary School Certificate, Science",
+                    institution: "IES School and College",
+                    location: "Dhaka, Bangladesh"
+                }
+            ],
+            skills: [
+                { name: "Networking & Cybersecurity", icon: "shield" },
+                { name: "ERP System", icon: "database" },
+                { name: "Languages", sub: "Python, C, C++, C#, Java", icon: "codesandbox" },
+                { name: "Frameworks", sub: "React & .NET", icon: "layers" },
+                { name: "HTML & CSS", icon: "layout" },
+                { name: "Oracle DB, SQL, MySQL", icon: "server" },
+                { name: "Linux", icon: "terminal" },
+                { name: "Digital Marketing", icon: "trending-up" },
+                { name: "Unreal Engine", icon: 'box' }
+            ],
+            certifications: [
+                "Ethical Hacking by Team Matrix",
+                "Foundations of Cybersecurity by Google",
+                "Network Security by Cisco",
+                "Introduction to Cybersecurity Tools & Cyber Attacks by IBM",
+                "Technical Support (IT) Case Studies and Capstone by IBM",
+                "Introduction to Digital Marketing by Great Learning Academy",
+                "Digital Marketing: Advanced by Ghoori Learning",
+                "Kishor Kantha Creative Writing",
+                "National Health Care Provider Solutions (NHCPS) Advanced Cardiac Life Support (ACLS)"
+            ]
+        };
+
+        // --- DYNAMIC CONTENT INJECTION ---
+        document.addEventListener('DOMContentLoaded', function() {
+            // Populate Experience
+            const experienceContainer = document.getElementById('experience-container');
+            portfolioData.experience.forEach((job, index) => {
+                const isLeft = index % 2 === 0;
+                const timelineItem = `
+                    <div class="mb-8 flex justify-between items-center w-full ${isLeft ? 'flex-row-reverse' : ''}">
+                        <div class="order-1 w-5/12"></div>
+                        <div class="z-20 flex items-center order-1 bg-blue-600/80 shadow-xl w-8 h-8 rounded-full">
+                            <h1 class="mx-auto font-semibold text-lg text-white">${portfolioData.experience.length - index}</h1>
+                        </div>
+                        <div class="order-1 card w-5/12 px-6 py-4 backdrop-blur-sm rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl border">
+                            <p class="text-sm text-slate-500 dark:text-slate-400 mb-1">${job.date}</p>
+                            <h3 class="font-bold text-xl">${job.title}</h3>
+                            <h4 class="font-semibold text-md">${job.company}</h4>
+                            <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">${job.location}</p>
+                            <p class="text-sm leading-snug tracking-wide mt-2">${job.description}</p>
+                        </div>
+                    </div>
+                `;
+                experienceContainer.innerHTML += timelineItem;
+            });
+
+            // Populate Education
+            const educationContainer = document.getElementById('education-container');
+            portfolioData.education.forEach(edu => {
+                const eduCard = `
+                    <div class="card p-6 backdrop-blur-sm rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl border">
+                        <h3 class="text-xl font-bold">${edu.degree}</h3>
+                        <p class="text-blue-600 font-semibold mt-1">${edu.institution}</p>
+                        <p class="text-sm mt-2">${edu.location} - ${edu.year}</p>
+                    </div>
+                `;
+                educationContainer.innerHTML += eduCard;
+            });
+
+            // Populate Skills
+            const skillsContainer = document.getElementById('skills-container');
+            portfolioData.skills.forEach(skill => {
+                const isSvgIcon = skill.icon.startsWith('<svg');
+                const iconHtml = isSvgIcon
+                    ? skill.icon
+                    : `<i data-feather="${skill.icon}"></i>`;
+
+                const skillItemHTML = `
+                    <li class="honeycomb-cell">
+                        <div class="honeycomb-cell__inner">
+                            <div class="w-8 h-8 mb-2 text-blue-600">
+                                ${iconHtml}
+                            </div>
+                            <span class="font-semibold text-sm">${skill.name}</span>
+                        </div>
+                    </li>
+                `;
+                skillsContainer.innerHTML += skillItemHTML;
+            });
+
+            // Populate Certifications
+            const certificationsContainer = document.getElementById('certifications-container');
+            portfolioData.certifications.forEach(cert => {
+                const certItem = `
+                    <div class="card p-4 flex items-center backdrop-blur-sm rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl border">
+                        <div class="bg-blue-100 text-blue-600 p-2 rounded-full mr-4">
+                            <i data-feather="award" class="w-5 h-5"></i>
+                        </div>
+                        <span class="font-medium">${cert}</span>
+                    </div>
+                `;
+                certificationsContainer.innerHTML += certItem;
+            });
+            
+            // Set current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // After populating, initialize Feather Icons
+            feather.replace();
+        });
+
+        // --- UI INTERACTIONS ---
+
+        // Background Animation
+        const backgroundAnimation = document.getElementById('background-animation');
+        const numberOfShapes = 20;
+
+        for (let i = 0; i < numberOfShapes; i++) {
+            const shape = document.createElement('li');
+            shape.classList.add('shape');
+            const size = Math.random() * 60 + 20;
+            const position = Math.random() * 100;
+            const delay = Math.random() * 10;
+            const duration = Math.random() * 15 + 10;
+            shape.style.width = `${size}px`;
+            shape.style.height = `${size}px`;
+            shape.style.left = `${position}%`;
+            shape.style.animationDelay = `${delay}s`;
+            shape.style.animationDuration = `${duration}s`;
+            if (i % 3 === 0) shape.style.borderRadius = '50%';
+            else if (i % 3 === 1) {
+                shape.style.width = '0';
+                shape.style.height = '0';
+                shape.style.borderLeft = `${size / 2}px solid transparent`;
+                shape.style.borderRight = `${size / 2}px solid transparent`;
+                shape.style.borderBottom = `${size}px solid`;
+                shape.style.background = 'transparent';
+            }
+            backgroundAnimation.appendChild(shape);
+        }
+
+        // Navbar style change on scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) header.classList.add('shadow-md');
+            else header.classList.remove('shadow-md');
+        });
+        
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+
+        // About Dropdown Toggle (on hover)
+        const aboutDropdownContainer = document.getElementById('about-dropdown-container');
+        const aboutDropdownMenu = document.getElementById('about-dropdown-menu');
+        aboutDropdownContainer.addEventListener('mouseenter', () => {
+            aboutDropdownMenu.classList.remove('hidden');
+        });
+        aboutDropdownContainer.addEventListener('mouseleave', () => {
+            aboutDropdownMenu.classList.add('hidden');
+        });
+
+        // Active Nav Link on Scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('#nav-menu a.nav-link');
+        window.addEventListener('scroll', () => {
+            let current = 'home';
+            sections.forEach(section => {
+                if (pageYOffset >= section.offsetTop - 70) current = section.getAttribute('id');
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        }, { passive: true });
+
+        // Scroll to Top Button
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+        window.onscroll = () => {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) scrollToTopBtn.classList.remove('hidden');
+            else scrollToTopBtn.classList.add('hidden');
+        };
+        scrollToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        // --- Dark Mode Toggle ---
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            themeToggleLightIcon.classList.remove('hidden');
+        } else {
+            document.documentElement.classList.remove('dark');
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+/* Light Mode Variables */
+        :root {
+            --bg-color: #f8fafc; /* slate-50 */
+            --text-color: #475569; /* slate-600 */
+            --heading-color: #1e293b; /* slate-800 */
+            --card-bg: rgba(255, 255, 255, 0.8);
+            --card-border: rgba(255, 255, 255, 0.2);
+            --header-bg: rgba(255, 255, 255, 0.5);
+            --glow-color: rgba(59, 130, 246, 0.5);
+        }
+
+        /* Dark Mode Variables */
+        html.dark {
+            --bg-color: #0f172a; /* slate-900 */
+            --text-color: #cbd5e1; /* slate-300 */
+            --heading-color: #f1f5f9; /* slate-100 */
+            --card-bg: rgba(30, 41, 59, 0.5); /* slate-800 with opacity */
+            --card-border: rgba(51, 65, 85, 0.5); /* slate-700 with opacity */
+            --header-bg: rgba(15, 23, 42, 0.5); /* slate-900 with opacity */
+            --glow-color: rgba(59, 130, 246, 0.7);
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            overflow-x: hidden; /* Prevent horizontal scrollbar from animation */
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        h1, h2, h3, h4, .font-bold, .font-semibold {
+            color: var(--heading-color);
+        }
+
+        /* --- Animated Background --- */
+        #background-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Place it behind all content */
+        }
+
+        .shape {
+            position: absolute;
+            display: block;
+            list-style: none;
+            width: 20px;
+            height: 20px;
+            background: rgba(173, 216, 230, 0.2);
+            animation: animate 25s linear infinite;
+            bottom: -150px;
+            border-radius: 4px;
+        }
+        html.dark .shape {
+             background: rgba(71, 85, 105, 0.2); /* slate-600 */
+        }
+
+        @keyframes animate {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-1000px) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-color: var(--card-border);
+        }
+        .nav-link {
+            color: var(--text-color);
+        }
+        .nav-link.active {
+            font-weight: 700;
+            background-color: rgba(59, 130, 246, 0.8);
+            color: white;
+        }
+        .nav-link.active:hover {
+            background-color: #2563eb;
+            color: white;
+        }
+        
+        /* --- Glassmorphism Header --- */
+        #header {
+            background-color: var(--header-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--card-border);
+            transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        /* --- Honeycomb Skills --- */
+        .honeycomb {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .honeycomb-cell {
+            flex: 0 0 150px;
+            max-width: 150px;
+            height: 170px;
+            margin: 28px 8px 0;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        .honeycomb-cell:hover {
+            transform: scale(1.1);
+            z-index: 10;
+        }
+        .honeycomb-cell__inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        /* --- Glowing Border for Profile Image --- */
+        .glow-border {
+            animation: glow 3s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                box-shadow: 0 0 20px 5px var(--glow-color);
+            }
+            50% {
+                box-shadow: 0 0 30px 10px var(--glow-color);
+            }
+        }
