@@ -12,67 +12,65 @@
     <link rel="stylesheet" href="StyleSheet.css">
 </head>
 <body>
-    
+
     <!-- Animated Background Container -->
     <div id="background-animation"></div>
 
     <!-- Header & Navigation -->
-    <header id="header" class="fixed top-0 left-0 right-0 z-50">
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex-shrink-0">
                     <a href="#home" class="text-2xl font-bold">Nahian Sarower Siam</a>
                 </div>
+
                 <div class="flex items-center">
                     <nav class="hidden md:block">
                         <div class="ml-10 flex items-baseline space-x-4" id="nav-menu">
                             <a href="#home" class="nav-link active px-4 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
-                            
-                            <!-- About Dropdown -->
+
                             <div class="relative" id="about-dropdown-container">
-                                <a href="#about" class="nav-link flex items-center px-4 py-2 rounded-md text-sm font-medium hover:bg-slate-200/50 dark:hover:bg-slate-700/50 hover:text-slate-900 dark:hover:text-slate-200 transition-colors">
+                                <button class="nav-link flex items-center px-4 py-2 rounded-md text-sm font-medium hover:bg-slate-200/50 dark:hover:bg-slate-700/50 transition-colors">
                                     About <i data-feather="chevron-down" class="w-4 h-4 ml-1"></i>
-                                </a>
-                                <div id="about-dropdown-menu" class="hidden absolute mt-2 w-48 rounded-md shadow-lg py-1 bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 z-20">
+                                </button>
+                                <div id="about-dropdown-menu" class="hidden absolute left-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white dark:bg-slate-800 ring-1 ring-black ring-opacity-5 z-20">
                                     <a href="#experience" class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700">Experience</a>
                                     <a href="#education" class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700">Education</a>
                                     <a href="#certifications" class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700">Certifications</a>
                                 </div>
                             </div>
-                            
-                            <a href="#contact" class="nav-link px-4 py-2 rounded-md text-sm font-medium hover:bg-slate-200/50 dark:hover:bg-slate-700/50 hover:text-slate-900 dark:hover:text-slate-200 transition-colors">Contact</a>
+
+                            <a href="#projects" class="nav-link px-4 py-2 rounded-md text-sm font-medium hover:bg-slate-200/50 dark:hover:bg-slate-700/50 transition-colors">Projects</a>
+                            <a href="#contact" class="nav-link px-4 py-2 rounded-md text-sm font-medium hover:bg-slate-200/50 dark:hover:bg-slate-700/50 transition-colors">Contact</a>
                         </div>
                     </nav>
-                     <div class="md:hidden ml-4">
-                        <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-slate-500 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
-                            <span class="sr-only">Open main menu</span>
+
+                    <div class="md:hidden ml-4">
+                        <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-slate-500 hover:bg-slate-100 focus:outline-none">
                             <i data-feather="menu"></i>
                         </button>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Mobile menu, show/hide based on menu state. -->
-        <div class="md:hidden hidden bg-white/80 dark:bg-slate-800/80 backdrop-blur-lg" id="mobile-menu">
+
+        <div class="md:hidden hidden bg-white/95 dark:bg-slate-800/95 backdrop-blur-lg" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700">Home</a>
-                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700">About</a>
-                <div class="pl-4">
-                    <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700">Experience</a>
-                    <a href="#education" class="block px-3 py-2 rounded-md text-base font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700">Education</a>
-                    <a href="#certifications" class="block px-3 py-2 rounded-md text-base font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700">Certifications</a>
-                </div>
+                <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700">Experience</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700">Projects</a>
+                <a href="#education" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700">Education</a>
+                <a href="#certifications" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700">Certifications</a>
                 <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700">Contact</a>
             </div>
         </div>
     </header>
-
     <main class="pt-16">
         <!-- Home Section -->
         <section id="home" class="min-h-screen flex items-center">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center pt-16">
-                    <img src="/Profile.jpg" alt="Nahian Sarower Siam" class="w-64 h-64 rounded-full mx-auto mb-8 border-4 border-white/50 shadow-lg glow-border">
+                    <img src=".\Profile.jpg" alt="Nahian Sarower Siam" class="w-64 h-64 rounded-full mx-auto mb-8 border-4 border-white/50 shadow-lg glow-border">
                     <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">Nahian Sarower Siam</h1>
                     <p class="mt-4 text-lg md:text-xl max-w-3xl mx-auto">Experienced IT Professional | ERP Development | Cyber Security | Technical Support</p>
                     <div class="mt-8 flex flex-col items-center space-y-4">
@@ -80,7 +78,7 @@
                             <a href="https://bd.linkedin.com/in/nahian-sarower-siam" target="_blank" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 shadow-sm">
                                 <i data-feather="linkedin" class="mr-2"></i> LinkedIn
                             </a>
-                            <a href="https://github.com/Nahian9678" target="_blank" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-900 shadow-sm">
+                            <a href="https://github.com/nahiansarower" target="_blank" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-900 shadow-sm">
                                 <i data-feather="github" class="mr-2"></i> GitHub
                             </a>
                         </div>
@@ -88,7 +86,7 @@
                             <a href="#contact" class="inline-flex items-center px-6 py-3 border border-slate-300 dark:border-slate-600 text-base font-medium rounded-md bg-white text-slate-700 dark:bg-slate-800 dark:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-700 shadow-sm">
                                 Get In Touch
                             </a>
-                            <a href="./Nahian Saroer SIam Resume - Copy.pdf" download="Nahian_Siam_Resume.pdf" class="inline-flex items-center px-6 py-3 border border-slate-300 dark:border-slate-600 text-base font-medium rounded-md bg-white text-slate-700 dark:bg-slate-800 dark:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-700 shadow-sm">
+                            <a href=".\Nahian Sarower Resume .pdf" download="Nahian Sarower Resume .pdf" class="inline-flex items-center px-6 py-3 border border-slate-300 dark:border-slate-600 text-base font-medium rounded-md bg-white text-slate-700 dark:bg-slate-800 dark:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-700 shadow-sm">
                                 <i data-feather="download" class="mr-2"></i> Download Resume
                             </a>
                         </div>
@@ -114,9 +112,9 @@
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-3xl font-bold mb-8 text-center">Work Experience</h2>
                 <div id="experience-container" class="relative max-w-4xl mx-auto">
-                     <!-- Timeline line -->
+                    <!-- Timeline line -->
                     <div class="absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-slate-300/50 dark:bg-slate-700/50"></div>
-                     <!-- Dynamic content will be injected here -->
+                    <!-- Dynamic content will be injected here -->
                 </div>
             </div>
         </section>
@@ -133,12 +131,20 @@
                         <!-- Video Placeholder -->
                         <div class="w-full h-full bg-slate-300 dark:bg-slate-700 rounded-lg flex items-center justify-center">
                             <div class="text-center">
-                                 <i data-feather="video" class="w-16 h-16 mx-auto text-slate-500 dark:text-slate-400"></i>
+                                <i data-feather="video" class="w-16 h-16 mx-auto text-slate-500 dark:text-slate-400"></i>
                                 <p class="mt-4 font-semibold">Your Game Video Here</p>
                                 <p class="text-sm">You can embed your video by replacing this placeholder.</p>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold mb-12 text-center">Featured Projects</h2>
+                <div id="projects-container" class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 </div>
             </div>
         </section>
@@ -186,7 +192,7 @@
                     </div>
                     <div class="text-center">
                         <div class="card p-6 rounded-full mb-2 inline-block backdrop-blur-sm shadow-md overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl border">
-                             <i data-feather="globe" class="w-10 h-10 text-blue-600"></i>
+                            <i data-feather="globe" class="w-10 h-10 text-blue-600"></i>
                         </div>
                         <p class="font-semibold">Travelling</p>
                     </div>
@@ -210,8 +216,7 @@
                     <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
                         <div class="flex items-center">
                             <i data-feather="mail" class="w-5 h-5 mr-2 text-blue-600"></i>
-                            <a href="mailto:nahiansarower1996@gmail.com" class="hover:text-blue-600">nahian.sarower.pro@gmail.com
-</a>
+                            <a href="mailto:nahian.sarower.pro@gmail.com" class="hover:text-blue-600">nahian.sarower.pro@gmail.com</a>
                         </div>
                         <div class="flex items-center">
                             <i data-feather="phone" class="w-5 h-5 mr-2 text-blue-600"></i>
@@ -229,7 +234,7 @@
             <p>&copy; <span id="current-year"></span> Nahian Sarower Siam. All Rights Reserved.</p>
         </div>
     </footer>
-    
+
     <!-- Floating Action Buttons -->
     <div class="fixed top-1/2 right-0 -translate-y-1/2 z-50 flex flex-col space-y-2 p-2 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm rounded-l-lg shadow-lg">
         <!-- Dark Mode Toggle -->
@@ -263,7 +268,39 @@
                     description: "Responsible for managing and providing comprehensive IT support across the organization. This included maintaining hardware and software systems, troubleshooting technical issues, and ensuring the smooth operation of the company's IT infrastructure."
                 }
             ],
+            projects: [
+                {
+                    title: "GramarBazaar.Shop",
+                    description: "Full-featured e-commerce platform with real-time tracking, inventory control, and automated stock alerts. Includes sales analytics and role-based access control.",
+                    tech: "E-commerce, Business Management",
+                    link: "#"
+                },
+                {
+                    title: "Quazi ERP (Ongoing)",
+                    description: "In-house ERP system development at QATL. Focused on gathering user requirements and translating them into functional system improvements.",
+                    tech: ".NET Core, C#, SQL Server",
+                    link: "#"
+                },
+                {
+                    title: "Electricity Bill Calculator",
+                    description: "A .NET MVC implementation of a slab-based billing engine, adapted from a complex console algorithm for utility calculations.",
+                    tech: "C#.NET MVC",
+                    link: "http://bangladeshelectricitybillingcalculator.somee.com/"
+                },
+                {
+                    title: "Book Store Management System",
+                    description: "Ongoing project featuring inventory modules, author/category management, and automated book code generation with image uploads.",
+                    tech: "C#.NET MVC, GitHub",
+                    link: "https://github.com/nahiansarower/e-Book-Store"
+                }
+            ],
             education: [
+                {
+                    year: "2025 - Present",
+                    degree: "Professional Diploma in Microsoft Web Application Development(MWAD)",
+                    institution: "People N Tech",
+                    location: "Dhaka, Bangladesh"
+                },
                 {
                     year: "2023",
                     degree: "Bachelor of Computer Science and Engineering",
@@ -302,39 +339,59 @@
         };
 
         // --- DYNAMIC CONTENT INJECTION ---
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Populate Experience
             const experienceContainer = document.getElementById('experience-container');
             portfolioData.experience.forEach((job, index) => {
                 const isLeft = index % 2 === 0;
                 const timelineItem = `
-                    <div class="mb-8 flex justify-between items-center w-full ${isLeft ? 'flex-row-reverse' : ''}">
-                        <div class="order-1 w-5/12"></div>
-                        <div class="z-20 flex items-center order-1 bg-blue-600/80 shadow-xl w-8 h-8 rounded-full">
-                            <h1 class="mx-auto font-semibold text-lg text-white">${portfolioData.experience.length - index}</h1>
+                        <div class="mb-8 flex justify-between items-center w-full ${isLeft ? 'flex-row-reverse' : ''}">
+                            <div class="order-1 w-5/12"></div>
+                            <div class="z-20 flex items-center order-1 bg-blue-600/80 shadow-xl w-8 h-8 rounded-full">
+                                <h1 class="mx-auto font-semibold text-lg text-white">${portfolioData.experience.length - index}</h1>
+                            </div>
+                            <div class="order-1 card w-5/12 px-6 py-4 backdrop-blur-sm rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl border">
+                                <p class="text-sm text-slate-500 dark:text-slate-400 mb-1">${job.date}</p>
+                                <h3 class="font-bold text-xl">${job.title}</h3>
+                                <h4 class="font-semibold text-md">${job.company}</h4>
+                                <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">${job.location}</p>
+                                <p class="text-sm leading-snug tracking-wide mt-2">${job.description}</p>
+                            </div>
                         </div>
-                        <div class="order-1 card w-5/12 px-6 py-4 backdrop-blur-sm rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl border">
-                            <p class="text-sm text-slate-500 dark:text-slate-400 mb-1">${job.date}</p>
-                            <h3 class="font-bold text-xl">${job.title}</h3>
-                            <h4 class="font-semibold text-md">${job.company}</h4>
-                            <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">${job.location}</p>
-                            <p class="text-sm leading-snug tracking-wide mt-2">${job.description}</p>
-                        </div>
-                    </div>
-                `;
+                    `;
                 experienceContainer.innerHTML += timelineItem;
             });
+
+            const projectsContainer = document.getElementById('projects-container');
+            portfolioData.projects.forEach(project => {
+                const projectCard = `
+                <div class="card p-6 backdrop-blur-sm rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl border flex flex-col h-full">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-lg">
+                            <i data-feather="layers" class="text-blue-600"></i>
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-400">${project.tech}</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">${project.title}</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-6 flex-grow">${project.description}</p>
+                    <a href="${project.link}" target="_blank" class="inline-flex items-center text-blue-600 font-semibold hover:underline">
+                        View Project <i data-feather="external-link" class="ml-2 w-4 h-4"></i>
+                    </a>
+                </div>
+            `;
+                projectsContainer.innerHTML += projectCard;
+            })
 
             // Populate Education
             const educationContainer = document.getElementById('education-container');
             portfolioData.education.forEach(edu => {
                 const eduCard = `
-                    <div class="card p-6 backdrop-blur-sm rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl border">
-                        <h3 class="text-xl font-bold">${edu.degree}</h3>
-                        <p class="text-blue-600 font-semibold mt-1">${edu.institution}</p>
-                        <p class="text-sm mt-2">${edu.location} - ${edu.year}</p>
-                    </div>
-                `;
+                        <div class="card p-6 backdrop-blur-sm rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl border">
+                            <h3 class="text-xl font-bold">${edu.degree}</h3>
+                            <p class="text-blue-600 font-semibold mt-1">${edu.institution}</p>
+                            <p class="text-sm mt-2">${edu.location} - ${edu.year}</p>
+                        </div>
+                    `;
                 educationContainer.innerHTML += eduCard;
             });
 
@@ -347,15 +404,15 @@
                     : `<i data-feather="${skill.icon}"></i>`;
 
                 const skillItemHTML = `
-                    <li class="honeycomb-cell">
-                        <div class="honeycomb-cell__inner">
-                            <div class="w-8 h-8 mb-2 text-blue-600">
-                                ${iconHtml}
+                        <li class="honeycomb-cell">
+                            <div class="honeycomb-cell__inner">
+                                <div class="w-8 h-8 mb-2 text-blue-600">
+                                    ${iconHtml}
+                                </div>
+                                <span class="font-semibold text-sm">${skill.name}</span>
                             </div>
-                            <span class="font-semibold text-sm">${skill.name}</span>
-                        </div>
-                    </li>
-                `;
+                        </li>
+                    `;
                 skillsContainer.innerHTML += skillItemHTML;
             });
 
@@ -363,16 +420,16 @@
             const certificationsContainer = document.getElementById('certifications-container');
             portfolioData.certifications.forEach(cert => {
                 const certItem = `
-                    <div class="card p-4 flex items-center backdrop-blur-sm rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl border">
-                        <div class="bg-blue-100 text-blue-600 p-2 rounded-full mr-4">
-                            <i data-feather="award" class="w-5 h-5"></i>
+                        <div class="card p-4 flex items-center backdrop-blur-sm rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl border">
+                            <div class="bg-blue-100 text-blue-600 p-2 rounded-full mr-4">
+                                <i data-feather="award" class="w-5 h-5"></i>
+                            </div>
+                            <span class="font-medium">${cert}</span>
                         </div>
-                        <span class="font-medium">${cert}</span>
-                    </div>
-                `;
+                    `;
                 certificationsContainer.innerHTML += certItem;
             });
-            
+
             // Set current year in footer
             document.getElementById('current-year').textContent = new Date().getFullYear();
 
@@ -416,7 +473,7 @@
             if (window.scrollY > 50) header.classList.add('shadow-md');
             else header.classList.remove('shadow-md');
         });
-        
+
         // Mobile Menu Toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -472,7 +529,7 @@
             themeToggleDarkIcon.classList.remove('hidden');
         }
 
-        themeToggleBtn.addEventListener('click', function() {
+        themeToggleBtn.addEventListener('click', function () {
             themeToggleDarkIcon.classList.toggle('hidden');
             themeToggleLightIcon.classList.toggle('hidden');
             if (localStorage.getItem('color-theme')) {
